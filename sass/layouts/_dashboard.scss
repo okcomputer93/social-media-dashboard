@@ -1,0 +1,39 @@
+.dashboard {
+    background-color: var(--color-background-pattern);
+    padding-bottom: 15rem;
+
+    &__content {
+        margin: 0 auto;
+        max-width: var(--max-width);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        color: var(--color-text-accent);
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    &__info {
+        margin-top: 4rem;
+        display: block;
+    }
+
+    &__total-followers {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    &__switch {
+        display: flex;
+        &-text {
+            padding-right: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: lighten(hsl(228, 12%, 44%), 20);
+        }
+    }
+}

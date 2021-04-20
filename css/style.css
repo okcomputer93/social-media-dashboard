@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+  --color-background: hsl(0, 0%, 100%);
+  --color-background-pattern: hsl(225, 100%, 98%);
+  --color-background-card: hsl(227, 47%, 96%);
+  --color-text-primary: hsl(228, 12%, 44%);
+  --color-text-accent: hsl(230, 17%, 14%);
+  --font-primary: "Inter", sans-serif;
+  --max-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.3%;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-text-primary);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 2rem;
+}
+.switch__checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch__slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 2rem;
+}
+.switch__slider-round::before {
+  content: "";
+  position: absolute;
+  height: 1.6rem;
+  width: 1.6rem;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.switch__checkbox:checked + .switch__slider-round {
+  background: linear-gradient(to right, #0a7fe6, #02b6a7);
+}
+.switch__checkbox:checked + .switch__slider-round::before {
+  -webkit-transform: translateX(1.8rem);
+  -ms-transform: translateX(1.8rem);
+  transform: translateX(1.8rem);
+}
+
+.dashboard {
+  background-color: var(--color-background-pattern);
+  padding-bottom: 15rem;
+}
+.dashboard__content {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboard__title {
+  color: var(--color-text-accent);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.dashboard__info {
+  margin-top: 4rem;
+  display: block;
+}
+.dashboard__total-followers {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.dashboard__switch {
+  display: flex;
+}
+.dashboard__switch-text {
+  padding-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #989dae;
+}
+
+/*# sourceMappingURL=style.css.map */
