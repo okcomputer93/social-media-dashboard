@@ -1,0 +1,41 @@
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 3rem;
+
+    &__element {
+        background-color: var(--color-background-card);
+        border-radius: 0.5rem;
+        padding: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 3rem;
+        transition: all 0.4s ease-in;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-hover-card);
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__logo {
+        display: inline-block;
+        justify-self: end;
+    }
+
+    &__number {
+        font-size: 3rem;
+        line-height: 1rem;
+        color: var(--color-text-accent);
+    }
+
+    &__percentage {
+        justify-self: end;
+    }
+}

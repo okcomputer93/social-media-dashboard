@@ -1,0 +1,10 @@
+.overview {
+    max-width: var(--max-width);
+    margin: -7rem auto;
+    margin-bottom: 3rem;
+
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,12 @@
+.number-stats {
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    &--up {
+        color: var(--color-text-up);
+    }
+
+    &--down {
+        color: var(--color-text-down);
+    }
+}

@@ -15,7 +15,7 @@
         padding: 2rem;
         border-radius: 0.5rem;
         cursor: pointer;
-        transition: 0.4s ease-in;
+        transition: all 0.4s ease-in;
 
         &--facebook {
             border-top: var(--color-facebook) solid 5px;
@@ -94,16 +94,6 @@
     }
 
     &__stats {
-        font-weight: 700;
-        font-size: 1.2rem;
         margin-top: 3rem;
-
-        &--is-up {
-            color: var(--color-text-up);
-        }
-
-        &--is-down {
-            color: var(--color-text-down);
-        }
     }
 }
