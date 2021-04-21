@@ -14,7 +14,7 @@
   --color-instagram-gradient-to: hsl(329, 70%, 58%);
   --color-youtube: hsl(348, 97%, 39%);
   --font-primary: "Inter", sans-serif;
-  --max-width: 1200px;
+  --max-width: 1220px;
 }
 
 *,
@@ -135,6 +135,7 @@ body {
 }
 .dashboard__content {
   margin: 0 auto;
+  padding: 0 2rem;
   max-width: var(--max-width);
   display: flex;
   justify-content: space-between;
@@ -150,7 +151,7 @@ body {
   display: block;
 }
 .dashboard__total-followers {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .dashboard__switch {
@@ -158,13 +159,14 @@ body {
 }
 .dashboard__switch-text {
   padding-right: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #989dae;
 }
 
 .cards {
   max-width: var(--max-width);
+  padding: 0 2rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -245,6 +247,7 @@ body {
 
 .overview {
   max-width: var(--max-width);
+  padding: 0 2rem;
   margin: -7rem auto;
   margin-bottom: 3rem;
 }
