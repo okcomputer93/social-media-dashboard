@@ -1,0 +1,102 @@
+.cards {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    // grid-template-rows: 20rem;
+    grid-gap: 3rem;
+    transform: translateY(-50%);
+}
+
+.card {
+    &__element {
+        background-color: var(--color-background-card);
+        text-align: center;
+        padding: 2rem;
+        border-radius: 0.5rem;
+
+        &--facebook {
+            border-top: var(--color-facebook) solid 5px;
+        }
+
+        &--twitter {
+            border-top: var(--color-twitter) solid 5px;
+        }
+
+        &--instagram {
+            $border: 5px;
+            position: relative;
+            background-clip: padding-box;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: $border;
+                width: 110%;
+                top: $border;
+                right: 0;
+                bottom: 0;
+                left: 5px;
+                z-index: 2;
+                margin: -$border;
+                border-radius: inherit;
+                background: linear-gradient(
+                    to right,
+                    var(--color-instagram-gradient-from),
+                    var(--color-instagram-gradient-to)
+                );
+            }
+        }
+
+        &--youtube {
+            border-top: var(--color-youtube) solid 5px;
+        }
+    }
+
+    &__user-info {
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        padding: 1rem;
+        display: inline-block;
+    }
+
+    &__user-id {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    &__followers-numb {
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 4rem;
+        color: var(--color-text-accent);
+    }
+
+    &__subtitle {
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.6rem;
+        text-transform: uppercase;
+        margin-top: 1rem;
+    }
+
+    &__stats {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-top: 3rem;
+
+        &--is-up {
+            color: var(--color-text-up);
+        }
+
+        &--is-down {
+            color: var(--color-text-down);
+        }
+    }
+}
