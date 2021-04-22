@@ -1,26 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
-:root {
-    --color-background: hsl(0, 0%, 100%);
-    --color-background-pattern: hsl(225, 100%, 98%);
-    --color-background-card: hsl(227, 47%, 96%);
-    --color-hover-card: #e1e3f0;
-    --color-text-primary: hsl(228, 12%, 44%);
-    --color-text-accent: hsl(230, 17%, 14%);
-    --color-text-up: hsl(163, 72%, 41%);
-    --color-text-down: hsl(356, 69%, 56%);
-
-    --color-facebook: hsl(208, 92%, 53%);
-    --color-twitter: hsl(203, 89%, 53%);
-    --color-instagram-gradient-from: hsl(37, 97%, 70%);
-    --color-instagram-gradient-to: hsl(329, 70%, 58%);
-    --color-youtube: hsl(348, 97%, 39%);
-
-    --font-primary: "Inter", sans-serif;
-
-    --max-width: 1220px;
-}
-
 *,
 *::before,
 *::after {
@@ -32,6 +11,18 @@
 html {
     box-sizing: border-box;
     font-size: 62.3%; // 10px
+
+    // @media only screen and (max-width: variables.$bp-medium) {
+    //     font-size: 56.25%; //9px;
+    // }
+
+    // @media only screen and (max-width: variables.$bp-small) {
+    //     font-size: 43.75%; //7px;
+    // }
+
+    // @media only screen and (max-width: variables.$bp-smaller) {
+    //     font-size: 37.5%; //6px;
+    // }
 }
 
 body {

@@ -1,22 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-:root {
-  --color-background: hsl(0, 0%, 100%);
-  --color-background-pattern: hsl(225, 100%, 98%);
-  --color-background-card: hsl(227, 47%, 96%);
-  --color-hover-card: #e1e3f0;
-  --color-text-primary: hsl(228, 12%, 44%);
-  --color-text-accent: hsl(230, 17%, 14%);
-  --color-text-up: hsl(163, 72%, 41%);
-  --color-text-down: hsl(356, 69%, 56%);
-  --color-facebook: hsl(208, 92%, 53%);
-  --color-twitter: hsl(203, 89%, 53%);
-  --color-instagram-gradient-from: hsl(37, 97%, 70%);
-  --color-instagram-gradient-to: hsl(329, 70%, 58%);
-  --color-youtube: hsl(348, 97%, 39%);
-  --font-primary: "Inter", sans-serif;
-  --max-width: 1220px;
-}
-
 *,
 *::before,
 *::after {
@@ -36,6 +18,23 @@ body {
   font-weight: 400;
   line-height: 1.6;
   background-color: var(--color-background);
+}
+
+.light-theme {
+  --color-background: hsl(0, 0%, 100%);
+  --color-background-pattern: hsl(225, 100%, 98%);
+  --color-background-card: hsl(227, 47%, 96%);
+  --color-hover-card: #e1e3f0;
+  --color-text-primary: hsl(228, 12%, 44%);
+  --color-text-accent: hsl(230, 17%, 14%);
+  --color-text-up: hsl(163, 72%, 41%);
+  --color-text-down: hsl(356, 69%, 56%);
+  --color-facebook: hsl(208, 92%, 53%);
+  --color-twitter: hsl(203, 89%, 53%);
+  --color-instagram-gradient-from: hsl(37, 97%, 70%);
+  --color-instagram-gradient-to: hsl(329, 70%, 58%);
+  --color-youtube: hsl(348, 97%, 39%);
+  --font-primary: "Inter", sans-serif;
 }
 
 .switch {
@@ -84,9 +83,15 @@ body {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 3rem;
+}
+@media only screen and (max-width: 25em) {
+  .stats {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-gap: 2rem;
+  }
 }
 .stats__element {
   background-color: var(--color-background-card);
@@ -133,22 +138,46 @@ body {
   background-color: var(--color-background-pattern);
   padding-bottom: 15rem;
 }
+@media only screen and (max-width: 25em) {
+  .dashboard {
+    padding-bottom: 8rem;
+  }
+}
 .dashboard__content {
   margin: 0 auto;
   padding: 0 2rem;
-  max-width: var(--max-width);
+  max-width: 1220px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .dashboard__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .dashboard__title {
   color: var(--color-text-accent);
   font-size: 3rem;
   font-weight: 700;
 }
+@media only screen and (max-width: 25em) {
+  .dashboard__title {
+    font-size: 2.5rem;
+  }
+}
 .dashboard__info {
   margin-top: 4rem;
   display: block;
+}
+@media only screen and (max-width: 37.5em) {
+  .dashboard__info {
+    width: 100%;
+    border-bottom: 1px solid var(--color-text-primary);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 .dashboard__total-followers {
   font-size: 1.5rem;
@@ -156,6 +185,12 @@ body {
 }
 .dashboard__switch {
   display: flex;
+}
+@media only screen and (max-width: 37.5em) {
+  .dashboard__switch {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 .dashboard__switch-text {
   padding-right: 1rem;
@@ -165,13 +200,26 @@ body {
 }
 
 .cards {
-  max-width: var(--max-width);
+  max-width: 1220px;
   padding: 0 2rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   grid-gap: 3rem;
   transform: translateY(-50%);
+}
+@media only screen and (max-width: 56.25em) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    transform: translateY(-25%);
+  }
+}
+@media only screen and (max-width: 25em) {
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-gap: 2rem;
+    transform: translateY(-3%);
+  }
 }
 
 .card__element {
@@ -246,14 +294,29 @@ body {
 }
 
 .overview {
-  max-width: var(--max-width);
+  max-width: 1220px;
   padding: 0 2rem;
-  margin: -7rem auto;
+  margin: -8rem auto;
   margin-bottom: 3rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .overview {
+    margin: -10rem auto;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .overview {
+    margin: 1rem auto;
+  }
 }
 .overview__title {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+}
+@media only screen and (max-width: 25em) {
+  .overview__title {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

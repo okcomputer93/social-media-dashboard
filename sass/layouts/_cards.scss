@@ -1,12 +1,23 @@
+@use '../abstract/variables';
 .cards {
-    max-width: var(--max-width);
+    max-width: variables.$max-width;
     padding: 0 2rem;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     // grid-template-rows: 20rem;
     grid-gap: 3rem;
     transform: translateY(-50%);
+
+    @media only screen and (max-width: variables.$bp-medium) {
+        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+        transform: translateY(-25%);
+    }
+    @media only screen and (max-width: variables.$bp-smaller) {
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+        grid-gap: 2rem;
+        transform: translateY(-3%);
+    }
 }
 
 .card {

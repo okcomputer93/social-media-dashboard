@@ -1,8 +1,14 @@
+@use '../abstract/variables';
 .stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 3rem;
+
+    @media only screen and (max-width: variables.$bp-smaller) {
+        grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+        grid-gap: 2rem;
+    }
 
     &__element {
         background-color: var(--color-background-card);

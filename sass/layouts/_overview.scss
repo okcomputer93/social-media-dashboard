@@ -1,11 +1,24 @@
+@use '../abstract/variables';
 .overview {
-    max-width: var(--max-width);
+    max-width: variables.$max-width;
     padding: 0 2rem;
-    margin: -7rem auto;
+    margin: -8rem auto;
     margin-bottom: 3rem;
+
+    @media only screen and (max-width: variables.$bp-medium) {
+        margin: -10rem auto;
+    }
+
+    @media only screen and (max-width: variables.$bp-small) {
+        margin: 1rem auto;
+    }
 
     &__title {
         font-size: 2.5rem;
-        margin-bottom: 2rem;
+        margin: 2rem 0;
+
+        @media only screen and (max-width: variables.$bp-smaller) {
+            font-size: 2rem;
+        }
     }
 }
