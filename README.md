@@ -25,10 +25,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot-light.jpg)
+![](./screenshot-light.png)
 Light schema of the page.
 
-![](./screenshot-dark.jpg)
+![](./screenshot-dark.png)
 Dark schema of the page.
 
 ### Links
