@@ -303,6 +303,12 @@ body {
 }
 .card__stats {
   margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card__icon-arrow {
+  padding: 3px;
 }
 
 .overview {
